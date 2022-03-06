@@ -2,43 +2,31 @@
 <html>
     <head>
         <title>The Personal Webpage of Fatima Kamara</title>
-        <link rel="stylesheet" type="text/css" href="personal-page.css">
+        <link rel="stylesheet" type="text/css" href="style.css">
     </head>
-    <body>
+    <body id="main-background">
+        <button id="dark-mode-btn" onclick="toggleDarkMode()">Dark Mode</button>
         <nav>
             <ul class="nav-items">
-               <li>Home</li>
                <li>
-                   <a class="nav-links" href="#timeline">About</a>
+                   <a class="nav-links" href="index.html">Home</a>
                 </li>
                <li>
-                   <a class="nav-links" href="#gallery">Gallery</a>
+                   <a class="nav-links" href="about.html">About</a>
                 </li>
+                    <!-- this had the #timeline id on it by href-->
                <li>
-                   <a class="nav-links" href="#contact">Contact</a>
+                   <a class="nav-links" href="gallery.html">Gallery</a>
                 </li>
             </ul>
         </nav>
         <h1 class="centered-elements">All About Fatima Kamara</h1>
-        <img class="centered-elements" src="https://media-exp1.licdn.com/dms/image/C5603AQE-7m820h10hQ/profile-displayphoto-shrink_200_200/0/1565109145733?e=1648684800&v=beta&t=dk-MUdLiM3MU2E1SIcA_DUi7yEWzKZXqPm32OqPzrLI" alt="Image of Fatima Kamara">
-        <h2 class="centered-elements">Who is she?</h2>
-        <p class="centered-elements">Here's a short timeline of Fatima's life:</p>
-        <ul class="centered-elements" id="timeline">
-            <li>Fatima K.J. Kamara was born on October 8th, 1998 in Riverdale, Georgia.</li>
-            <li>In elementary school, she was recognized as a "gifted" student and skipped 4th grade.</li>
-            <li>Fatima graduated high school with a 4.4 weighted GPA on a 4.0 scale as a result of taking IB and AP classes. She gave a speech at her graduation. </li>
-            <li>Fatima graduated from Johns Hopkins University in May of 2020 with a degree in Public Health.</li>
-            <li>She is currently studying to become a UX Designer, learning web development skills, and working on a plant-based product line.</li>
-        </ul>
-
-<!--creating an image carousel
-        <section id="gallery">
-            <img>
-            <img>
-        </section>
--->
-
-        <p class="centered-elements" id="contact">To learn more about Fatima, you can find her on
-            <a href="https://www.linkedin.com/in/fatima-kamara/" target="_blank">LinkedIn</a>.</p>
+        <div id="homepage-photos">
+            <img class="profile-image" src="https://media-exp1.licdn.com/dms/image/C5603AQE-7m820h10hQ/profile-displayphoto-shrink_200_200/0/1565109145733?e=1648684800&v=beta&t=dk-MUdLiM3MU2E1SIcA_DUi7yEWzKZXqPm32OqPzrLI" alt="Image of Fatima Kamara">
+            <img class="profile-image" src="Images/IMG_3318.jpg" alt="Image of Fatima Kamara 2">
+            <img class="profile-image" src="Images/IMG_7376.jpg" height="100" alt="Image of Fatima 3">
+        </div>
+        <p id="greeting">Hi, I'm Fatima. Welcome to my site!</p>
+        <script src="main.js"></script>
     </body>
 </html>
