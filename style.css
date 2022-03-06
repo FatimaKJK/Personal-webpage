@@ -1,0 +1,142 @@
+body{
+    background: #fadbb7;
+    color: #942c03;
+    display: flex;
+    flex-direction: column;
+}
+
+.centered-elements{
+    align-self: center;
+}
+
+h1{
+    font-size: 40px;
+    font-family: cursive;
+    font-weight: bolder;
+    font-style: italic;
+    color: #942c03;
+    padding-top: 10px;
+    padding-bottom: 10px;
+}
+
+.profile-image{
+    display: block;
+    width: 300px;
+    height: 300px;
+    border: 3px dotted white;
+    border-radius: 50%;
+    padding: 10px;
+    margin: 10px;
+}
+
+#homepage-photos{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+#greeting{
+    margin-top: 60px;
+}
+
+h2{
+    font-family: fantasy;
+    color: #942c03;
+    padding-top: 30px;
+    padding-bottom: 10px;
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 0px;
+}
+
+p{
+    font-size: 26px;
+    font-weight: bold; 
+    text-align: center;
+}
+
+.nav-items{
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-end;
+    font-weight: bold;
+    font-size: 20px;
+    margin-top: 0px;
+    margin-right: 25px;
+}
+
+.nav-links{
+    color: #942c03;
+    text-decoration: none;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+a{
+    color: #942c03;
+    text-decoration: wavy underline white;
+}
+
+button{
+    padding: 10px;
+    border: none;
+    display: inline-block;
+    width: 100px;
+    border-radius: 5px;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    box-shadow: 2px 2px 5px grey;
+} 
+
+#timeline{
+    font-size: 20px;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 0%;
+    padding-bottom: 0px;
+}
+
+#social-media{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.social-media-icons{
+    width: 50px;
+    height: 50px;
+}
+
+#gallery-description{
+    padding-bottom: 25px;
+}
+
+.gallery-image{
+    width: 18rem;
+    height: 24rem;
+    padding-bottom: 5%;
+    margin: 0px;
+}
+
+.row{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+/*creating an image carousel
+.gallery-container{
+    scroll-snap-type: x mandatory;
+}
+.gallery-image{
+    scroll-snap-align: start;
+    width: 100px;
+}
+making images responsive
+section{
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+}
