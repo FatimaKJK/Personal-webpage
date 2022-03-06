@@ -1,147 +1,49 @@
-body{
-    background: #fadbb7;
-    color: #942c03;
-    display: flex;
-    flex-direction: column;
+function toggleDarkMode() {
+    localStorage.setItem('theme', 'dark');
+    let bodyElement = document.getElementById("main-background");
+    let darkModeButtonElement = document.getElementById("dark-mode-btn");
+    //let navigationText = document.getElementsByClassName("nav-links");
+
+if (bodyElement.style.background === "black") {
+    bodyElement.style.background = "#fadbb7";
+    darkModeButtonElement.innerHTML = "Dark Mode";
+} else {
+    bodyElement.style.background = "black";
+    darkModeButtonElement.innerHTML = "Light Mode";
+    //navigationText[0].style.color = "white";
+    //navigationText[1].style.color = "white";
+    //navigationText[2].style.color = "white";
 }
 
-.centered-elements{
-    align-self: center;
 }
 
-h1{
-    font-size: 40px;
-    font-family: cursive;
-    font-weight: bolder;
-    font-style: italic;
-    color: #942c03;
-    padding-top: 10px;
-    padding-bottom: 10px;
+//for slideshow
+var slideIndex = 1;
+showSlides(slideIndex);
+
+// Next/previous controls
+function plusSlides(n) {
+  showSlides(slideIndex += n);
 }
 
-.profile-image{
-    display: block;
-    width: 300px;
-    height: 300px;
-    border: 3px dotted white;
-    border-radius: 50%;
-    padding: 10px;
-    margin: 10px;
+// Thumbnail image controls
+function currentSlide(n) {
+  showSlides(slideIndex = n);
 }
 
-#homepage-photos{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
 }
-
-#greeting{
-    margin-top: 60px;
-}
-
-h2{
-    font-family: fantasy;
-    color: #942c03;
-    padding-top: 30px;
-    padding-bottom: 10px;
-    font-size: 30px;
-    text-align: center;
-    margin-bottom: 0px;
-}
-
-p{
-    font-size: 26px;
-    font-weight: bold; 
-    text-align: center;
-}
-
-.nav-items{
-    list-style-type: none;
-    display: flex;
-    justify-content: flex-end;
-    font-weight: bold;
-    font-size: 20px;
-    margin-top: 0px;
-    margin-right: 25px;
-}
-
-.nav-links{
-    color: #942c03;
-    text-decoration: none;
-    padding-left: 15px;
-    padding-right: 15px;
-}
-
-a{
-    color: #942c03;
-    text-decoration: wavy underline white;
-}
-
-button{
-    padding: 10px;
-    border: none;
-    display: inline-block;
-    width: 100px;
-    border-radius: 5px;
-    margin-left: 10px;
-    margin-right: 10px;
-    margin-top: 10px;
-    margin-bottom: 0px;
-    box-shadow: 2px 2px 5px grey;
-} 
-
-#timeline{
-    font-size: 20px;
-    margin-left: 10%;
-    margin-right: 10%;
-    margin-bottom: 0%;
-    padding-bottom: 0px;
-}
-
-#social-media{
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-}
-
-.social-media-icons{
-    width: 50px;
-    height: 50px;
-}
-
-#gallery-description{
-    padding-bottom: 25px;
-}
-
-.gallery-image{
-    width: 18rem;
-    height: 24rem;
-    padding-bottom: 5%;
-    margin: 0px;
-}
-
-.row{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-}
-
-.map{
-    width: 100%;
-    border: 5px black;
-}
-
-/*creating an image carousel
-.gallery-container{
-    scroll-snap-type: x mandatory;
-}
-.gallery-image{
-    scroll-snap-align: start;
-    width: 100px;
-}
-making images responsive
-section{
-    display: flex;
-    justify-content: center;
-    width: 100vw;
-}
+//fix to show 2 slides not three
