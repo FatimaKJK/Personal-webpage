@@ -126,6 +126,11 @@ button{
     justify-content: space-around;
 }
 
+.map{
+    width: 100%;
+    border: 5px black;
+}
+
 /*creating an image carousel
 .gallery-container{
     scroll-snap-type: x mandatory;
